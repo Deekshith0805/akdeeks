@@ -1,0 +1,58 @@
+def student_detail(details,string):
+    l=[]
+    for i in string:
+        c=i.split('_')
+        c.sort()
+        l.append(c)
+    for i in range(0,len(details)):
+        a=list(details[i].values())
+        a.sort()
+        for j in range(0,len(l)):
+            if a== l[j]:
+                print(string[j]+"-"+details[i]["id"])
+                print("------")
+details=[
+    {
+        "id":"1",
+        "f_name":"adam",
+        "l_name":"andrew",
+        "dob":"2002"
+    },
+    {
+        
+        "id":"2",
+        "f_name":"brownie",
+        "l_name":"chaos",
+        "dob":"2003"
+    },
+    {
+        
+        "id":"3",
+        "f_name":"deeksbhai",
+        "l_name":"ff",
+        "dob":"2001"
+    },
+    {
+        "id":"4",
+        "f_name":"adam",
+        "l_name":"andrew",
+        "dob":"2002"
+    },
+    {
+        
+        "id":"5",
+        "f_name":"brownie",
+        "l_name":"chaos",
+        "dob":"2003"
+    },
+    {
+        
+        "id":"6",
+        "f_name":"deeksbhai",
+        "l_name":"ff",
+        "dob":"2001"
+    }
+    
+]
+string=["1_adam_andrew_2002","3_deeksbhai_ff_2001","2_brownie_chaos_2003","2_brownie_chaos_2003","4_adam_andrew_2002"]
+student_detail(details,string)
